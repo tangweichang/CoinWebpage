@@ -1,0 +1,56 @@
+#circle {
+	width: 250px;
+  	height: 250px;
+  	border-radius: 50%;
+  	font-size: 50px;
+ 	color: #fff;
+  	line-height: 250px;
+  	text-align: center;
+  	background: #000
+}
+
+.center {
+	margin: 10px;
+    width: 500px;
+    border: 3px solid;
+    padding: 20px;
+}
+
+.circleDiv {
+	display:inline-block;
+}
+
+.big-circle {
+	font-size: 50px;
+	line-height: 200px;
+	width: 200px;
+	height: 200px;
+	background: #70AAD4;
+	border-radius: 50%;
+	position: relative;
+	/* For presentation */
+	margin-left: 30px;
+	margin-top: 30px;
+	text-align: center;
+	display: inline-block;
+}
+
+.small-circle {
+	line-height: 65px;
+	font-size: 20px;
+	background: #70aad4 none repeat scroll 0 0;
+	border: 2px solid white;
+	border-radius: 50%;
+	height: 33%;
+	left: +75%;
+	position: absolute;
+	top: -5%;
+	width: 33%;
+	text-align: center;
+	display: none;
+}
+
+.mainDiv {
+	width: 510px;
+	margin: 0 auto;
+}

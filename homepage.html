@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoinCalculator</title>
+	<link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+<body>
+	<div class = "mainDiv">
+		<center>COIN COUNTER</center>
+		<div class = "big-circle">
+			<input type="text" id="1"/>
+
+			<div class = "small-circle"></div>
+		</div>
+		<div class = "big-circle">
+			<input type="text" id="2" />
+			<div class = "small-circle"></div>
+		</div>
+
+		<div class = "big-circle">
+			<input type="text" id="3"/>
+
+			<div class = "small-circle"></div>
+		</div>
+		<div class = "big-circle">
+			<input type="text" id="4" />
+			<div class = "small-circle"></div>
+		</div>
+		
+		<input id = "coinValue" class = "center" type="text" name="value">
+		</br>
+		<button class = "center" id = "cal" onclick = "func()">CALCULATE</button>
+	</div>
+
+	<div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript">
+	function func() {
+		var divsToShow = document.getElementsByClassName("small-circle");
+
+		
+    	var amount = document.getElementById('coinValue').value;
+    	var c1 = document.getElementById('1').value;
+    	var c2 = document.getElementById('2').value;
+    	var c3 = document.getElementById('3').value;
+    	var c4 = document.getElementById('4').value;
+    	var coins = [c1, c2, c3, c4];
+    	var cache = [];
+    	var dp = [];
+    	
+
+    	
+    	for (var i = 0; i <= amount; i++) {
+    		dp.push(2147483647);
+    	}
+    	for (var i = 0; i <= amount; i++) {
+    		cache.push([0,0,0,0]);
+    	}
+    	
+    	
+
+    	dp[0] = 0;
+
+    	for (var i = 1; i <= amount; i++) {
+    		for (var j = 0; j < coins.length; j++) {
+    			if (i - coins[j] >= 0 && dp[i - coins[j]] !== 2147483647) {
+    				if (dp[i - coins[j]] + 1 < dp[i]) {
+    					dp[i] = dp[i - coins[j]] + 1;
+    					var temp = cache[i - coins[j]].slice();
+    					temp[j]++;
+    					cache[i] = temp;
+    				}
+    			}
+    		}
+    	}
+
+    	
+
+
+
+    	for(var i = 0; i < divsToShow.length; i++){
+        	if ( (cache[amount])[i] == 0) continue;
+        	divsToShow[i].style.display = "block"; // depending on what you're doing
+        	divsToShow[i].innerHTML += (cache[amount])[i];
+    	}
+
+
+    	
+	}
+
+	</script>
+
+
+</body>
+</html>
