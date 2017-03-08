@@ -1,13 +1,3 @@
-#circle {
-	width: 250px;
-  	height: 250px;
-  	border-radius: 50%;
-  	font-size: 50px;
- 	color: #fff;
-  	line-height: 250px;
-  	text-align: center;
-  	background: #000
-}
 
 .coin {
 	font-size: 20px;
@@ -33,9 +23,6 @@
     font-size: 20px;
 }
 
-.circleDiv {
-	display:inline-block;
-}
 
 .big-circle {
 	font-size: 50px;

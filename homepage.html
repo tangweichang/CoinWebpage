@@ -53,17 +53,13 @@
     	var cache = [];
     	var dp = [];
     	
-
-    	
     	for (var i = 0; i <= amount; i++) {
     		dp.push(2147483647);
     	}
     	for (var i = 0; i <= amount; i++) {
     		cache.push([0,0,0,0]);
     	}
-    	
-    	
-
+  
     	dp[0] = 0;
 
     	for (var i = 1; i <= amount; i++) {
@@ -79,18 +75,11 @@
     		}
     	}
 
-    	
-
-
-
     	for(var i = 0; i < divsToShow.length; i++){
         	if ( (cache[amount])[i] == 0) continue;
         	divsToShow[i].style.display = "block"; // depending on what you're doing
         	divsToShow[i].innerHTML += (cache[amount])[i];
-    	}
-
-
-    	
+    	}	
 	}
 
 	</script>
