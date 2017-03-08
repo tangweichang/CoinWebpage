@@ -9,11 +9,27 @@
   	background: #000
 }
 
+.coin {
+	font-size: 20px;
+	text-align: center;
+	width: 100px;
+	
+}
+
 .center {
+	text-align: center;
 	margin: 10px;
-    width: 500px;
-    border: 3px solid;
+    width: 450px;
     padding: 20px;
+    font-size: 20px;
+}
+
+.center2 {
+	text-align: center;
+	margin: 10px;
+    width: 494px;
+    padding: 20px;
+    font-size: 20px;
 }
 
 .circleDiv {
@@ -22,10 +38,10 @@
 
 .big-circle {
 	font-size: 50px;
-	line-height: 200px;
+	line-height: 190px;
 	width: 200px;
 	height: 200px;
-	background: #70AAD4;
+	background: #ceccc0;
 	border-radius: 50%;
 	position: relative;
 	/* For presentation */
@@ -38,7 +54,8 @@
 .small-circle {
 	line-height: 65px;
 	font-size: 20px;
-	background: #70aad4 none repeat scroll 0 0;
+	color: white;
+	background: #161613 none repeat scroll 0 0;
 	border: 2px solid white;
 	border-radius: 50%;
 	height: 33%;
